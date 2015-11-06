@@ -9,12 +9,26 @@
     <artifactId>eventa</artifactId>
 
     <properties>
+        <!-- GAE properties -->
+
         <app.id>eventa-indoona</app.id>
         <app.version>1</app.version>
         <appengine.version>1.9.27</appengine.version>
         <gcloud.plugin.version>2.0.9.74.v20150814</gcloud.plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
+
+        <!-- Indoona properties -->
+        <indoona.app.redirect>https://eventa-indoona.appspot.com/redirect</indoona.app.redirect>
+        <indoona.app.clientid>***</indoona.app.clientid>
+        <indoona.app.clientsecret>***</indoona.app.clientsecret>
+        <indoona.room.roomnumber>33</indoona.room.roomnumber>
+        <indoona.room.roomname>Eventi attorno a te</indoona.room.roomname>
+        <indoona.room.roomimg>https://lh3.googleusercontent.com/-lBS8dnXoAiM/AAAAAAAAAAI/AAAAAAAABfM/9wjarOVJMVE/s120-c/photo.jpg</indoona.room.roomimg>
+        <indoona.room.roomfirstmessage>Ciao, sono Eventa e ti aiuterò a trovare i migliori eventi attorno a te. Digita la città :-)</indoona.room.roomfirstmessage>
+        <indoona.room.roomdesc>Ciao, sono Eventa e ti aiuterò a trovare i migliori eventi attorno a te. Digita la città :-)</indoona.room.roomdesc>
+
+
     </properties>
 
     <prerequisites>
@@ -32,6 +46,11 @@
                 <groupId>com.indoona.openplatform</groupId>
                 <artifactId>javasdk</artifactId>
                 <version>0.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.geocoder-java</groupId>
+            <artifactId>geocoder-java</artifactId>
+            <version>0.16</version>
         </dependency>
             <dependency>
         <groupId>net.sf.json-lib</groupId>

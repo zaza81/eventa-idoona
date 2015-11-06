@@ -5,11 +5,11 @@
   version="2.5">
   <servlet>
     <servlet-name>indoona</servlet-name>
-    <servlet-class>com.eventa.indoona.IndoonaServlet</servlet-class>
+    <servlet-class>com.eventa.indoona.api.IndoonaServlet</servlet-class>
   </servlet>
     <servlet>
     <servlet-name>redirect</servlet-name>
-    <servlet-class>com.eventa.indoona.Redirect</servlet-class>
+    <servlet-class>com.eventa.indoona.api.Redirect</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>indoona</servlet-name>
@@ -20,6 +20,6 @@
     <url-pattern>/redirect</url-pattern>
   </servlet-mapping>
    <listener>
-        <listener-class>com.eventa.indoona.BootContextListener</listener-class>
+        <listener-class>com.eventa.indoona.config.BootContextListener</listener-class>
     </listener>
 </web-app>
