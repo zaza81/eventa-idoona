@@ -6,9 +6,9 @@ The project  is a  middleware  which adds an interactive channel to an indoona u
 # Usage
 Requirements:
 -Regitered indoona app with key and secret;
--GAE project active
+-GAE project active.
 
-Todo:
+# Todo:
 -Change the name of the GAE project in pom.xml
 -Change indoona app information and channel information in Config.java file.
 -Customize user buildResponse in User.java
