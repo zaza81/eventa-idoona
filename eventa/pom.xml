@@ -18,15 +18,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
 
-        <!-- Indoona properties -->
-        <indoona.app.redirect>https://eventa-indoona.appspot.com/redirect</indoona.app.redirect>
-        <indoona.app.clientid>***</indoona.app.clientid>
-        <indoona.app.clientsecret>***</indoona.app.clientsecret>
-        <indoona.room.roomnumber>33</indoona.room.roomnumber>
-        <indoona.room.roomname>Eventi attorno a te</indoona.room.roomname>
-        <indoona.room.roomimg>https://lh3.googleusercontent.com/-lBS8dnXoAiM/AAAAAAAAAAI/AAAAAAAABfM/9wjarOVJMVE/s120-c/photo.jpg</indoona.room.roomimg>
-        <indoona.room.roomfirstmessage>Ciao, sono Eventa e ti aiuterò a trovare i migliori eventi attorno a te. Digita la città :-)</indoona.room.roomfirstmessage>
-        <indoona.room.roomdesc>Ciao, sono Eventa e ti aiuterò a trovare i migliori eventi attorno a te. Digita la città :-)</indoona.room.roomdesc>
 
 
     </properties>
@@ -58,6 +49,11 @@
         <version>2.3</version>
         <classifier>jdk15</classifier>
        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20140107</version>
+        </dependency>
         <dependency>
             <groupId>com.googlecode.objectify</groupId>
             <artifactId>objectify</artifactId>

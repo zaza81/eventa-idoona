@@ -1,5 +1,8 @@
-/Users/andreazanda/Desktop/indoona/eventa/src/main/java/com/eventa/indoona/IndoonaServlet.java
-/Users/andreazanda/Desktop/indoona/eventa/src/main/java/com/eventa/indoona/BootContextListener.java
+/Users/andreazanda/Desktop/indoona/eventa/src/main/java/com/eventa/indoona/lib/Semantic.java
+/Users/andreazanda/Desktop/indoona/eventa/src/main/java/com/eventa/indoona/config/Config.java
+/Users/andreazanda/Desktop/indoona/eventa/src/main/java/com/eventa/indoona/api/IndoonaServlet.java
 /Users/andreazanda/Desktop/indoona/eventa/src/main/java/com/eventa/indoona/model/User.java
-/Users/andreazanda/Desktop/indoona/eventa/src/main/java/com/eventa/indoona/Config.java
-/Users/andreazanda/Desktop/indoona/eventa/src/main/java/com/eventa/indoona/Redirect.java
+/Users/andreazanda/Desktop/indoona/eventa/src/main/java/com/eventa/indoona/config/BootContextListener.java
+/Users/andreazanda/Desktop/indoona/eventa/src/main/java/com/eventa/indoona/api/Redirect.java
+/Users/andreazanda/Desktop/indoona/eventa/src/main/java/com/eventa/indoona/model/Conversation.java
+/Users/andreazanda/Desktop/indoona/eventa/src/main/java/com/eventa/indoona/lib/Eventa.java

@@ -41,10 +41,13 @@ protected void doGet(HttpServletRequest request,
       String code = request.getParameter("code");
 
       // getting user info and storing
-      UserAccessToken token = User.createUser(code);
+      User usr = User.createUser(code);
 
       //add channel to user and sending message
-      User.addChannel(token);
+      usr.addChannel();
+
+      //send welcome messato to User
+      usr.sendMessage(Config.roomFirstMessage);
     
 
 

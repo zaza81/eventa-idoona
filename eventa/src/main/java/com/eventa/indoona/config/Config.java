@@ -13,19 +13,19 @@ import java.lang.*;
 public class Config  {
 
 //app settings
-public static String redirect= System.getProperty("indoona.app.redirect");
-public static String client_id = System.getProperty("indoona.app.clientid");
-public static String client_secret = System.getProperty("indoona.app.clientsecret");
+public static String redirect= "https://eventa-indoona.appspot.com/redirect";
+public static String client_id = "**";
+public static String client_secret = "**";
 
 //room settings
-public static String roomNumber =System.getProperty("indoona.room.roomnumber");
-public static String roomName   =System.getProperty("indoona.room.roomname");
-public static String roomImg    =System.getProperty("indoona.room.roomimg");
-public static String roomFirstMessage = System.getProperty("indoona.room.roomfirstmessage");
-public static String roomDesc = System.getProperty("indoona.room.roomdesc");
+public static String roomNumber = "44" ;
+public static String roomName   = "Eventi attorno a te";
+public static String roomImg    = "https://lh3.googleusercontent.com/-lBS8dnXoAiM/AAAAAAAAAAI/AAAAAAAABfM/9wjarOVJMVE/s120-c/photo.jpg";
+public static String roomFirstMessage =  "Ciao, sono Eventa e ti aiuterò a trovare i migliori eventi attorno a te. Digita la città :-)" ;
+public static String roomDesc = "Ciao, sono Eventa e ti aiuterò a trovare i migliori eventi attorno a te. Digita la città :-)";
 
 
-public static void  init() {	
+	public static void  init() {
 
 
 // initialize a configuration provider with your app’s data

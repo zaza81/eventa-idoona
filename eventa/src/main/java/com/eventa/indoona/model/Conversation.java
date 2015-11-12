@@ -16,7 +16,7 @@ import com.googlecode.objectify.annotation.Index;
 public class Conversation {
     @Id Long id;
     @Index String userId;
-    DateTime when;
+    String when;
     @Index String messageUser;
     @Index String messageBot;
 
@@ -27,7 +27,7 @@ public class Conversation {
 
     public Conversation(String userId, DateTime when, String messageUser, String messageBot ){
         this.userId = userId;
-        this.when = when;
+        this.when = when.toString();
         this.messageUser = messageUser;
         this.messageBot = messageBot;
     }
@@ -37,7 +37,7 @@ public class Conversation {
         return userId;
     }
 
-    public DateTime getWhen() {
+    public String getWhen() {
         return when;
     }
 
