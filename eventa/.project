@@ -3,6 +3,7 @@
 	<name>eventa</name>
 	<comment></comment>
 	<projects>
+		<project>javasdk</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

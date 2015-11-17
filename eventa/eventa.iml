@@ -11,11 +11,12 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: com.google.appengine:appengine-api-1.0-sdk:1.9.27" level="project" />
-    <orderEntry type="library" name="Maven: com.indoona.openplatform:javasdk:0.9.0" level="project" />
+    <orderEntry type="library" name="Maven: com.indoona.openplatform:indoona-java-sdk:0.9.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.9" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpmime:4.5" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tika:tika-core:1.11" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.geocoder-java:geocoder-java:0.16" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.2.4" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.7" level="project" />

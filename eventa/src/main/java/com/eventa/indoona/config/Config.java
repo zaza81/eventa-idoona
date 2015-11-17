@@ -14,8 +14,8 @@ public class Config  {
 
 //app settings
 public static String redirect= "https://eventa-indoona.appspot.com/redirect";
-public static String client_id = "**";
-public static String client_secret = "**";
+public static String client_id = "5645cb62846449063542a624Blt64";
+public static String client_secret = "6C9JEI7OnsaYxgFLTHKf20EWMSx8lEcshlcW4jKrLUqjb654NPkQQZMDRkLdYYFg";
 
 //room settings
 public static String roomNumber = "44" ;
@@ -38,7 +38,7 @@ confProvider.init(client_id, client_secret,
 
 
 try {
-	ProviderLocator.buildInstance(confProvider);
+	ProviderLocator.buildInstance(confProvider);	
 
 	ProviderLocator.getInstance().setProvider(
 		ProviderLocator.TAG_MD5_SIGNATURE_PROVIDER, 

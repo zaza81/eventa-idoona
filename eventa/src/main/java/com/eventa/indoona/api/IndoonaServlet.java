@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.*;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 
 import javax.servlet.http.HttpServlet;
@@ -37,46 +38,28 @@ import net.sf.json.JSONObject;
 
 
 public class IndoonaServlet extends HttpServlet {
-  @Override
+
+    private static final Logger log = Logger.getLogger(IndoonaServlet.class.getName());
+
+    @Override
   public void doGet(HttpServletRequest req, HttpServletResponse resp)
       throws IOException {
 
     try {
 
-        String address = req.getParameter("address");
-    //testing the rest service
-     resp.setContentType("text/plain");
-     resp.getWriter().println("testing rest: ok");
-       // User usr = ObjectifyService.ofy().load().type(User.class).filter("userId", "1xgeeo2detmobnsiw727vbqjd").first().now();
+        String data = req.getParameter("text");
 
-     String json = "{\"access_token\":\"00a0a04b1f50c79b939cb8cc279535bd52633b7d\",\"token_type\":\"Bearer\",\"creation_date\":1447255231128,\"ttl\":360000,\"scope\":\"basic user_phone\",\"user_id\":\"1xgeeo2detmobnsiw727vbqjd\",\"refresh_token\":\"80e0c60038f1ae20e4d785e6400eadc065df5935\"}";
-             String lat =    "40.5578";
-        String lon =  "8.32194";
-        String tel =         "+393482353703";
-        String name =         "andrea";
-        String refresh = "80e0c60038f1ae20e4d785e6400eadc065df5935";
-        String surname =  "zanda";
-        String token = "00a0a04b1f50c79b939cb8cc279535bd52633b7d";
-        String userId =  "1xgeeo2detmobnsiw727vbqjd";
-       // String userResponse = usr.buildResponse("eventi milano domani");
+        User user = new User("bfxsokz84nzqpd0678yfa0h79", "9a9ed52c07e3695cfc046260b1c98a3be54830e5", "954df45c4c1b063496f3e56f9aec4a09fe3b6058", "{\"access_token\":\"9a9ed52c07e3695cfc046260b1c98a3be54830e5\",\"token_type\":\"Bearer\",\"creation_date\":1447683273458,\"ttl\":360000,\"scope\":\"basic\",\"user_id\":\"bfxsokz84nzqpd0678yfa0h79\",\"refresh_token\":\"954df45c4c1b063496f3e56f9aec4a09fe3b6058\"}",
+                "andrea", "zanda", "+393482353703");
 
-        User usr = new User();
-        usr.setJsonUserAccessToken(json);
-        usr.setLat(lat);
-        usr.setLon(lon);
-        usr.setMobileNumber(tel);
-        usr.setName(name);
-        usr.setRefreshToken(refresh);
-        usr.setSurname(surname);
-        usr.setToken(token);
-        usr.setUserId(userId);
-        ObjectifyService.ofy().save().entity(usr).now();
+        ObjectifyService.ofy().save().entity(user).now();
 
 
-        //Conversation conversation = new Conversation("", DateTime.now(), "ciao", "");
-        //ObjectifyService.ofy().save().entity(conversation).now();
+        User usr = ObjectifyService.ofy().load().type(User.class).filter("userId", "bfxsokz84nzqpd0678yfa0h79").first().now();
+        String userResponse = usr.buildResponse(data);
 
-        resp.getWriter().println("ciao");
+        //sending message
+        usr.sendMessage(userResponse);
 
 
 
@@ -96,6 +79,7 @@ public class IndoonaServlet extends HttpServlet {
       throws IOException {
          try {
 
+             log.severe("ok");
       //getting data parameter
        String data = req.getParameter("data");
 

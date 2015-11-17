@@ -1,8 +1,10 @@
 com/eventa/indoona/config/Config.class
 com/eventa/indoona/model/Conversation.class
-com/eventa/indoona/api/IndoonaServlet.class
 com/eventa/indoona/api/Redirect.class
+com/eventa/indoona/api/IndoonaServlet.class
 com/eventa/indoona/model/User.class
-com/eventa/indoona/lib/Eventa.class
 com/eventa/indoona/lib/Semantic.class
+com/eventa/indoona/lib/Eventa.class
+com/eventa/indoona/api/Connect.class
+com/eventa/indoona/api/Management.class
 com/eventa/indoona/config/BootContextListener.class

@@ -48,6 +48,10 @@ protected void doGet(HttpServletRequest request,
 
       //send welcome messato to User
       usr.sendMessage(Config.roomFirstMessage);
+
+
+
+      
     
 
 

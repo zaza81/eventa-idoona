@@ -24,6 +24,8 @@ public class BootContextListener implements ServletContextListener {
               ObjectifyService.register(User.class);
               ObjectifyService.register(Conversation.class);
               lg.info("Objectify configured!");
+              
+              
 
 
     }

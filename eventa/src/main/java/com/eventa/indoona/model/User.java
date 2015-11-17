@@ -139,6 +139,31 @@ public class User {
 
     }
 
+    public   void addChannel (String code, String name) {
+
+        try{
+            //create a contact for the user
+            List<String> caps = new ArrayList();
+            caps.add("group_add");
+            caps.add("interactive");
+
+            Contact eventaChannel = new Contact(
+                    code,
+                    name,
+                    Config.roomImg,
+                    caps);
+            UserAccessToken uat = UserAccessToken.fromJson(this.getJsonUserAccessToken());
+            ProviderLocator.getInstance().getApiProvider().invokeContactAddApi(uat, eventaChannel);
+
+
+
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
     public  void sendMessage ( String message) {
 
@@ -146,6 +171,7 @@ public class User {
         try{
             UserAccessToken uat =  UserAccessToken.fromJson(this.getJsonUserAccessToken());
                if(uat.isExpired()) {
+
                UserAccessToken newUat = ProviderLocator.getInstance()
                         .getAuthorizationProvider()
                         .refreshUserAccessToken(uat);
@@ -181,7 +207,7 @@ public class User {
     public String buildResponse(String usertext){
         String response = "Hi my friend!";
         //TODO: 1) get eventa results 2) show them 3) interpret query
-
+        System.out.println("**************" +usertext);
         JSONObject jsonobj = JSONObject.fromObject(Semantic.extractSemantic(usertext));
         String date = jsonobj.getJSONObject("when").getString("date");
         String lat = jsonobj.getJSONObject("where").getString("lat");
@@ -200,7 +226,7 @@ public class User {
         }
         else if(lat=="null" && (getLat() == "0.0" || getLat() == null)) {
 
-            response = this.getName()+",non ho capito il luogo, potresti specificarlo?";
+            response = "Hey ,non ho capito il luogo, potresti specificarlo?";
 
 
         } else if (lat=="null" && getLat() != "0.0" ){
@@ -215,7 +241,7 @@ public class User {
             else {
                    date =  fmt.print(DateTime.parse(date));
             }
-            response =  this.getName()+", "+ msg +" ---> " + Eventa.getEvents(lat, lon, date);
+            response =  "Hey, "+ msg +" ---> " + Eventa.getEvents(lat, lon, date);
 
         }
         else {
@@ -230,7 +256,7 @@ public class User {
             this.setLat(lat);
             this.setLon(lon);
             ObjectifyService.ofy().save().entity(this).now();
-            response = this.getName()+", "+ msg+ " ---> " +Eventa.getEvents(lat, lon, date);
+            response = "Hey, "+ msg+ " ---> " +Eventa.getEvents(lat, lon, date);
 
         }
 
